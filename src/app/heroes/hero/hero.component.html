@@ -16,10 +16,14 @@
 
 </dl>
 
-<button (click)="changeHero()" class="btn btn-primary mx-2">
+<button *ngIf="name !== 'Spiderman'" (click)="changeHero()" class="btn btn-primary mx-2">
   Cambiar nombre
 </button>
 
-<button (click)="changeAge()" class="btn btn-primary">
+<button *ngIf="age !== 23" (click)="changeAge()" class="btn btn-primary">
   Cambiar edad
+</button>
+
+<button *ngIf="age !== 45 || name !== 'ironman'" (click)="resetForm()" class="btn btn-primary mx-2">
+  Reset
 </button>

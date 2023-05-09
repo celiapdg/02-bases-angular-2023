@@ -26,4 +26,9 @@ export class HeroComponent {
     this.age = 23;
   }
 
+  resetForm(): void {
+    this.name = 'ironman';
+    this.age = 45;
+  }
+
 }
